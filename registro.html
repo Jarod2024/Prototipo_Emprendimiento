@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Registro | Codelink</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        .auth-container { max-width: 400px; margin: 100px auto; padding: 30px; border-radius: 12px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); font-family: 'Poppins', sans-serif; }
+        .auth-form input { width: 100%; padding: 12px; margin: 10px 0; border: 1px solid #ddd; border-radius: 6px; box-sizing: border-box; }
+        .btn-auth { width: 100%; background: #007bff; color: white; padding: 12px; border: none; border-radius: 6px; cursor: pointer; font-weight: 600; }
+    </style>
+</head>
+<body>
+    <div class="auth-container">
+        <div class="logo" style="text-align: center; font-size: 2rem; margin-bottom: 20px;">Code<span style="color: #007bff;">link</span></div>
+        <h2>Crear cuenta</h2>
+        <form id="formRegistro" class="auth-form">
+            <input type="text" id="regNombre" placeholder="Nombre del Negocio" required>
+            <input type="email" id="regEmail" placeholder="Correo electrónico" required>
+            <input type="password" id="regPass" placeholder="Contraseña segura" required>
+            <button type="submit" class="btn-auth">Registrarse</button>
+        </form>
+        <p style="text-align: center; margin-top: 15px;">¿Ya tienes cuenta? <a href="login.html">Inicia sesión</a></p>
+    </div>
+    <script src="auth.js"></script>
+</body>
+</html>

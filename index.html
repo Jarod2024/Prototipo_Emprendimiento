@@ -6,7 +6,7 @@
     <title>Codelink | Tu Sucursal Digital en Cotopaxi</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
 
@@ -18,6 +18,7 @@
                 <li><a href="#solucion">Solución</a></li>
                 <li><a href="#planes">Planes</a></li>
                 <li><a href="#equipo">Equipo</a></li>
+                <li><a href="login.html" style="color: #007bff; font-weight: 700;">Ingresar</a></li>
                 <li><a href="#contacto" class="btn-nav">Contáctanos</a></li>
             </ul>
         </nav>
@@ -78,8 +79,9 @@
                         <li>✔ Botón flotante WhatsApp</li>
                         <li>✔ Optimización móvil</li>
                     </ul>
-                    <a href="#contacto" class="btn-plan">Elegir Plan</a>
+                    <a href="detalles-plan.html?plan=landing" class="btn-plan">Elegir Plan</a>
                 </div>
+
                 <div class="price-card featured">
                     <div class="badge">Más Popular</div>
                     <h3>Sucursal Digital</h3>
@@ -90,8 +92,9 @@
                         <li>✔ Formulario de pedidos</li>
                         <li>✔ Indexación en Google</li>
                     </ul>
-                    <a href="#contacto" class="btn-primary">Elegir Plan</a>
+                    <a href="detalles-plan.html?plan=sucursal" class="btn-primary">Elegir Plan</a>
                 </div>
+
                 <div class="price-card">
                     <h3>E-commerce Pro</h3>
                     <div class="price">$350<span>+IVA</span></div>
@@ -100,7 +103,7 @@
                         <li>✔ Gestión de Inventario</li>
                         <li>✔ Carrito de compras</li>
                     </ul>
-                    <a href="#contacto" class="btn-plan">Elegir Plan</a>
+                    <a href="detalles-plan.html?plan=ecommerce" class="btn-plan">Elegir Plan</a>
                 </div>
             </div>
         </div>
@@ -110,7 +113,7 @@
         <div class="section-title">
             <h2>Expertos Locales</h2>
             <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1000&q=80" alt="Equipo Codelink" class="team-hero-img">
-            <p class="team-names">Hidalgo • Campoverde • Chamorro • Chancusig • Guallichico • Torres</p>
+            <p class="team-names">Hidalgo • Campoverde • Chamorro • Guallichico</p>
             <p class="expertise">Innovación desde la ESPE para el crecimiento de Cotopaxi.</p>
         </div>
     </section>
@@ -120,19 +123,35 @@
             <div class="contact-box">
                 <h2>¿Listo para el siguiente nivel?</h2>
                 <p>Escríbenos hoy mismo y recibe una asesoría gratuita para digitalizar tu negocio.</p>
-                <a href="https://wa.me/593XXXXXXXXX" class="btn-whatsapp" target="_blank">
-                    <i class="fab fa-whatsapp"></i> Contactar por WhatsApp
-                </a>
-                <p class="small-text">Respuesta inmediata de nuestro equipo técnico.</p>
+                
+                <div style="margin-bottom: 25px;">
+                    <a href="https://wa.me/593968526123" class="btn-whatsapp" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Contactar por WhatsApp
+                    </a>
+                </div>
+
+                <div class="social-links" style="font-size: 1.5rem; margin-top: 20px;">
+                    <p style="font-size: 1rem; margin-bottom: 10px;">Síguenos en nuestras redes:</p>
+                    <a href="https://facebook.com" target="_blank" style="color: #3b5998; margin: 0 15px;"><i class="fab fa-facebook"></i></a>
+                    <a href="https://instagram.com" target="_blank" style="color: #e1306c; margin: 0 15px;"><i class="fab fa-instagram"></i></a>
+                    <a href="https://tiktok.com" target="_blank" style="color: #000; margin: 0 15px;"><i class="fab fa-tiktok"></i></a>
+                </div>
+
+                <p class="small-text" style="margin-top: 25px;">Respuesta inmediata de nuestro equipo técnico.</p>
             </div>
         </div>
     </section>
 
     <footer>
         <div class="container">
+            <div style="margin-bottom: 15px;">
+                <a href="https://facebook.com" target="_blank" style="color: #444; margin: 0 10px; font-size: 1.2rem;"><i class="fab fa-facebook"></i></a>
+                <a href="https://instagram.com" target="_blank" style="color: #444; margin: 0 10px; font-size: 1.2rem;"><i class="fab fa-instagram"></i></a>
+            </div>
             <p>&copy; 2025 Codelink - Latacunga, Ecuador. Todos los derechos reservados.</p>
         </div>
     </footer>
 
+    <script src="auth.js"></script>
 </body>
 </html>
