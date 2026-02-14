@@ -1,8 +1,67 @@
 const API_URL = window.location.origin;
 
-// --- REGISTRO Y LOGIN (Se mantienen igual) ---
-// ... (Tus funciones de fetch aquí) ...
+// --- Lógica para REGISTRO ---
+const formRegistro = document.getElementById('formRegistro');
+if (formRegistro) {
+    formRegistro.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const nombre = document.getElementById('regNombre').value;
+        const email = document.getElementById('regEmail').value;
+        const password = document.getElementById('regPass').value;
 
+        try {
+            const res = await fetch(`${API_URL}/registro`, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ nombre, email, password })
+            });
+            const data = await res.json();
+
+            if (res.ok) {
+                alert("✅ Registro exitoso. Ahora puedes iniciar sesión.");
+                window.location.href = 'login.html';
+            } else {
+                alert("❌ Error: " + data.error);
+            }
+        } catch (error) {
+            console.error("Error en registro:", error);
+            alert("No se pudo conectar con el servidor.");
+        }
+    });
+}
+
+// --- Lógica para LOGIN ---
+const formLogin = document.getElementById('formLogin');
+if (formLogin) {
+    formLogin.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const email = document.getElementById('logEmail').value;
+        const password = document.getElementById('logPass').value;
+
+        try {
+            const res = await fetch(`${API_URL}/login`, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ email, password })
+            });
+            const data = await res.json();
+
+            if (res.ok) {
+                // Guardamos el nombre en el navegador
+                localStorage.setItem('usuarioNombre', data.nombre); 
+                alert("¡Bienvenido de nuevo, " + data.nombre + "!");
+                window.location.href = 'index.html'; 
+            } else {
+                alert("❌ " + data.error);
+            }
+        } catch (error) {
+            console.error("Error en login:", error);
+            alert("No se pudo conectar con el servidor.");
+        }
+    });
+}
+
+// --- Lógica para VERIFICAR SESIÓN Y MOSTRAR PLAN ---
 function verificarSesion() {
     const nombreGuardado = localStorage.getItem('usuarioNombre');
     const planGuardado = localStorage.getItem('planContratado');
